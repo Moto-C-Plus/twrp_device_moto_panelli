@@ -1,19 +1,3 @@
-#
-# Copyright (C) 2017 The Android Open Source Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-
 LOCAL_PATH := device/moto/panelli
 
 # Platform
@@ -68,37 +52,18 @@ MTK_HARDWARE := true
 #COMMON_GLOBAL_CPPFLAGS += -DMTK_HARDWARE
 
 # TWRP
-TW_DEVICE_VERSION := Moto-C-Plus
+RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
-TW_MAX_BRIGHTNESS := 255
-TW_DEFAULT_BRIGHTNESS := 120
 TW_EXCLUDE_SUPERSU := true
-TW_INCLUDE_FB2PNG := true
+TW_INCLUDE_INJECTTWRP := false
+TW_DEVICE_VERSION := Panelli-DhirajMS
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
-TW_NO_CPU_TEMP := true
-TW_REBOOT_RECOVERY := true
-TW_USE_TOOLBOX := true
-RECOVERY_SDCARD_ON_DATA := true
-TW_INTERNAL_STORAGE_PATH := "/emmc"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "emmc"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_INCLUDE_CRYPTO := true
-TW_CRYPTO_FS_TYPE := "ext4"
-TARGET_USERIMAGES_USE_EXT4 := true
-TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
-TW_HAVE_SELINUX := true
-TW_HAS_MTP := true
-TW_CRYPTO_MNT_POINT := "/data"
-TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
-TW_NEVER_UNMOUNT_SYSTEM := true
-TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
-TW_ALWAYS_RMRF := true
+TW_INCLUDE_FB2PNG := true
+TW_HAS_DOWNLOAD_MODE := false
+INTERNAL_LOCAL_CLANG_EXCEPTION_PROJECTS := external/busybox/
 TW_NO_SCREEN_BLANK := true
+TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
+#TW_USE_TOOLBOX := true
 
 PRODUCT_COPY_FILES += device/moto/panelli/twrp.fstab:recovery/root/etc/twrp.fstab
 PRODUCT_COPY_FILES += device/moto/panelli/recovery.fstab:recovery/root/etc/recovery.fstab
