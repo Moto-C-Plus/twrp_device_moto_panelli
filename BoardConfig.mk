@@ -1,4 +1,4 @@
-LOCAL_PATH := device/moto/panelli
+LOCAL_PATH := device/moto/nicklaus
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6737m
@@ -20,7 +20,7 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
-TARGET_PREBUILT_KERNEL := device/moto/panelli/zImage-dtb
+TARGET_PREBUILT_KERNEL := device/moto/nicklaus/zImage-dtb
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x04000000
@@ -32,8 +32,8 @@ BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET)
 
 # make_ext4fs requires numbers in dec format
-BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216 
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216 
+BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2432696320
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 4698144768
 BOARD_CACHEIMAGE_PARTITION_SIZE := 419430400
@@ -42,7 +42,7 @@ TARGET_KMODULES := true
 
 # Assert
 #rip ported recoveries
-TARGET_OTA_ASSERT_DEVICE := Moto,"panelli",panelli,Moto_C,Moto C,C,Moto C Plus,Moto_C_plus,namath
+TARGET_OTA_ASSERT_DEVICE := Moto,"nicklaus",nicklaus,Moto_C,Moto C,C,Moto C Plus,Moto_C_plus,namath
 
 # MTK Hardware
 BOARD_HAS_MTK_HARDWARE := true
@@ -56,7 +56,7 @@ RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 TW_EXCLUDE_SUPERSU := true
 TW_INCLUDE_INJECTTWRP := false
-TW_DEVICE_VERSION := Panelli-DhirajMS
+TW_DEVICE_VERSION := nicklaus-SamarV-121
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_INCLUDE_FB2PNG := true
 TW_HAS_DOWNLOAD_MODE := false
@@ -65,6 +65,6 @@ TW_NO_SCREEN_BLANK := true
 TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
 #TW_USE_TOOLBOX := true
 
-PRODUCT_COPY_FILES += device/moto/panelli/twrp.fstab:recovery/root/etc/twrp.fstab
-PRODUCT_COPY_FILES += device/moto/panelli/recovery.fstab:recovery/root/etc/recovery.fstab
-PRODUCT_COPY_FILES += device/moto/panelli/fstab.mt6735:recovery/root/etc/fstab.mt6735
+PRODUCT_COPY_FILES += device/moto/nicklaus/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += device/moto/nicklaus/recovery.fstab:recovery/root/etc/recovery.fstab
+PRODUCT_COPY_FILES += device/moto/nicklaus/fstab.mt6735:recovery/root/etc/fstab.mt6735
