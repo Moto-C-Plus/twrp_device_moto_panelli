@@ -67,4 +67,3 @@ TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
 
 PRODUCT_COPY_FILES += device/moto/panelli/twrp.fstab:recovery/root/etc/twrp.fstab
 PRODUCT_COPY_FILES += device/moto/panelli/recovery.fstab:recovery/root/etc/recovery.fstab
-PRODUCT_COPY_FILES += device/moto/panelli/fstab.mt6735:recovery/root/etc/fstab.mt6735
